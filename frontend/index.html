@@ -1,0 +1,82 @@
+<!--doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI & DS Dept — Voice Chatbot (Smart TV)</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div id="slideshow" class="slideshow">
+  </div>
+
+  <div id="overlay" class="overlay hidden">
+    <div id="chatbox" class="chatbox">
+      <div id="status" class="status">Chatbot active — Welcome! Ask me anything about the department.</div>
+      <div id="response" class="response"></div>
+    </div>
+    <div id="controls" class="controls">
+      <label for="lang">Language:</label>
+      <select id="lang">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="mr">Marathi</option>
+      </select>
+      <button id="askBtn">Ask Again</button>
+
+    </div>
+  </div>
+
+  <button id="mic" class="mic" title="Talk to the chatbot">
+    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1v11"></path><path d="M19 11a7 7 0 0 1-14 0"></path><path d="M5 11v2a7 7 0 0 0 14 0v-2"></path></svg>
+  </button>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI & DS Dept — Voice Chatbot (Smart TV)</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div id="slideshow" class="slideshow">
+    <!-- slides will be injected by JS -->
+  </div>
+
+  <div id="overlay" class="overlay hidden">
+    <div id="chatbox" class="chatbox">
+      <div id="status" class="status">
+        Chatbot active — Welcome! Ask me anything about the department.
+      </div>
+      <div id="response" class="response"></div>
+    </div>
+    <div id="controls" class="controls">
+      <label for="lang">Language:</label>
+      <select id="lang">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="mr">Marathi</option>
+      </select>
+      <!-- Added Ask Again + Close -->
+      <button id="askBtn">Ask Again</button>
+      <button id="closeBtn">Close</button>
+    </div>
+  </div>
+
+  <button id="mic" class="mic" title="Talk to the chatbot">
+    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path d="M12 1v11"></path>
+      <path d="M19 11a7 7 0 0 1-14 0"></path>
+      <path d="M5 11v2a7 7 0 0 0 14 0v-2"></path>
+    </svg>
+  </button>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
