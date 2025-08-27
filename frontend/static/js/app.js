@@ -126,7 +126,7 @@
   async function sendQueryToServer(text, language) {
     try {
       setStatus('Fetching answer...');
-      showResponse(text, 'Bot is preparing answer...');
+      showResponse(text, 'AI is preparing answer...');
       const resp = await fetch('/api/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -249,7 +249,7 @@
     }
     overlay.classList.add('hidden');
     try { window.speechSynthesis.cancel(); } catch (e) {}
-    setStatus('Idle - click mic to start the chatbot.');
+    setStatus('Idle - click ask again button to start the chatbot.');
     responseDiv.textContent = "";
   }
 
@@ -269,7 +269,7 @@
   function init() {
     buildSlides();
     startSlideshow();
-    setStatus('Idle - click mic to start the chatbot.');
+    setStatus('Idle - click ask agin button to start the chatbot.');
     if (micBtn) micBtn.addEventListener('click', onMicClick);
     if (askBtn) askBtn.addEventListener('click', onAskAgainClick); // FIXED
     if (closeBtn) closeBtn.addEventListener('click', onCloseClick);
