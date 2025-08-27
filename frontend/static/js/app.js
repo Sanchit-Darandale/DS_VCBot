@@ -126,7 +126,7 @@
   async function sendQueryToServer(text, language) {
     try {
       setStatus('Fetching answer...');
-      showResponse(text, 'AI is preparing answer...');
+      showResponse(text, 'Preparing answer...');
       const resp = await fetch('/api/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
