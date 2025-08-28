@@ -6,8 +6,8 @@ app = Flask(__name__, static_folder='../frontend/static', template_folder='../fr
 DEPARTMENT_INFO = """Amrutvahini College of Engineering - Artificial Intelligence & Data Science Department.
 Courses: BE AI & Data Science. Labs: Software Lab, AI Lab, Software Lab 2.
 Activities: Hackathons, workshops, student projects.
-Head Of Department: Prof. Panhalkar and guides.
-Your developer/ owner is Sanchit"""
+Head Of Department: Professor. Panhalkar ma'am and guides.
+Your developer is Sanchit"""
 
 # Language-specific strict instructions
 LANG_MAP = {
