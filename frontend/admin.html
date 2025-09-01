@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Panel — AI&DS</title>
+  <link rel="stylesheet" href="/static/admin/admin.css" />
+</head>
+<body class="admin-body">
+  <aside class="sidebar">
+    <div class="logo">AI&DS Admin</div>
+    <nav>
+      <button class="nav-btn active" data-tab="dashboard">Dashboard</button>
+      <button class="nav-btn" data-tab="media">Media Upload</button>
+      <button class="nav-btn" data-tab="settings">Settings</button>
+    </nav>
+    <a class="logout" href="/admin/logout">Logout</a>
+  </aside>
+
+  <main class="content">
+    <section id="tab-dashboard" class="tab visible">
+      <h1>Dashboard</h1>
+      <div id="flash" class="flash"></div>
+      <div class="grid">
+        <div class="card" id="stats-images">Images: 0</div>
+        <div class="card" id="stats-videos">Videos: 0</div>
+        <div class="card" id="stats-models">3D Models: 0</div>
+      </div>
+    </section>
+
+    <section id="tab-media" class="tab">
+      <h1>Media Upload</h1>
+      <form id="uploadForm" class="card" enctype="multipart/form-data">
+        <label>Type</label>
+        <select name="type" required>
+          <option value="image">Image</option>
+          <option value="video">Video</option>
+          <option value="model">3D Model (Video)</option>
+        </select>
+        <label>Caption</label>
+        <input name="caption" placeholder="Enter caption">
+        <label>File</label>
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+      </form>
+
+      <h2>Existing Media</h2>
+      <div id="mediaList" class="media-list"></div>
+    </section>
+
+    <section id="tab-settings" class="tab">
+      <h1>Settings</h1>
+      <form id="settingsForm" class="card">
+        <label>Default Chatbot Language</label>
+        <select name="default_language">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="mr">Marathi</option>
+        </select>
+
+        <label>Slider Interval (in sec)</label>
+        <input name="slider_interval_ms" type="number" min="2" step="1" value="60">
+
+        <label>Welcome Message</label>
+        <input name="welcome_message" placeholder="Hello Welcome ...">
+
+        <button type="submit">Save Settings</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/static/admin/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+:root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--text:#e6eef6;--muted:#8fa3b8;--hover:#1f2937}
+*{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+.auth-body,.admin-body{min-height:100vh;display:flex}
+/* Login */
+.auth-card{margin:auto;background:linear-gradient(145deg,#121827,#0b1220);padding:28px;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.35);width:min(420px,92vw)}
+.auth-card h1{margin-top:0}
+.auth-card input,.auth-card button{width:100%;padding:10px;border-radius:10px;border:1px solid #1f2a3a;background:#0d1524;color:#fff;margin:6px 0}
+.auth-card button{background:linear-gradient(180deg,var(--accent),#066b73);border:none;cursor:pointer}
+.alert{background:#0e1a2b;border:1px solid #18324e;padding:10px;border-radius:10px;margin:8px 0}
+.alert.error{border-color:#7a2e2e;background:#2b0e0e}
+
+/* Admin layout */
+.sidebar{width:240px;background:#0b1220;padding:18px;display:flex;flex-direction:column;gap:14px;position:sticky;top:0;height:100vh}
+.logo{font-weight:700;font-size:20px;color:var(--accent)}
+.nav-btn{display:block;width:100%;padding:12px;border-radius:8px;border:none;background:var(--hover);color:var(--text);text-align:left;cursor:pointer;transition:background .3s;margin-bottom:10px}
+.nav-btn.active{outline:2px solid var(--accent)}
+.logout{margin-top:auto;color:var(--muted);text-decoration:none;font-size:14px;transition:color .3s;position:fixed;bottom:20px;left:20px}
+.logout:hover{color:var(--text)}
+.content{flex:1;padding:20px}
+.tab{display:none}.tab.visible{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:#0b1220;border:1px solid #1f2a3a;border-radius:12px;padding:14px}
+.media-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:10px}
+.media-item{background:#0d1524;border:1px solid #1f2a3a;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.media-item img,.media-item video{width:100%;height:200px;object-fit:cover;border-radius:10px}
+.media-item .caption{font-size:14px;color:var(--muted)}
+.media-item .row{display:flex;gap:8px}
+.media-item button{flex:1;padding:8px;border-radius:10px;border:1px solid #1f2a3a;background:#0d1524;color:#fff;cursor:pointer}
+.flash{margin:10px 0}
+.settings{display:flex;flex-direction:column;gap:16px}
+.settings label{display:block;margin-bottom:4px;font-weight:bold}
+.settings input,.settings select,.settings textarea{width:100%;padding:8px;border:1px solid var(--muted);border-radius:4px;background:var(--card);color:var(--text)}
+/* Ensure each setting option is displayed in a separate row */
+#settingsForm {
+  display: flex;
+  flex-direction: column; /* Arrange settings vertically */
+  gap: 20px; /* Add spacing between each setting */
+}
+
+#settingsForm .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Add spacing between label and input */
+}
+
+#settingsForm label {
+  font-weight: bold;
+  color: var(--text);
+}
+
+#settingsForm input, #settingsForm select, #settingsForm textarea, #settingsForm button {
+  padding: 10px;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  width: 100%;
+}
